@@ -34,8 +34,8 @@ def main(args):
         print(os.path.join(args.results_dir, file_name + ".png"))
         cv2.imwrite(os.path.join(args.results_dir, file_name + ".png"), canvas)
         final_result = candidate
-        with open(os.path.join(args.results_dir, file_name + ".json"), "w") as out_file:
-            json.dumps({"result": final_result.tolist()}, out_file)
+        with open(os.path.join(args.results_dir, file_name + ".json"), encoding='utf-8', mode="w") as out_file:
+            json.dump({"result": final_result.tolist()}, out_file)
 
 
 if __name__ == '__main__':
