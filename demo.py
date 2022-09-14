@@ -18,7 +18,7 @@ def parse_args():
 
 def main(args):
 
-    file_names = glob.glob(args.input_folder + "/Screen*.jpg")
+    file_names = glob.glob(args.input_folder + "/*.jpg")
     body_estimation = Body('model/body_pose_model.pth')
 
     for each in file_names:
