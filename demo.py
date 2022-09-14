@@ -8,6 +8,7 @@ import glob
 import json
 import os
 import cv2
+import copy
 
 def parse_args():
     parser = argparse.ArgumentParser()
