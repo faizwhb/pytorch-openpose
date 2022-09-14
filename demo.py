@@ -29,6 +29,7 @@ def main(args):
         candidate, subset = body_estimation(oriImg)
         canvas = copy.deepcopy(oriImg)
         canvas = util.draw_bodypose(canvas, candidate, subset)
+        print(os.path.join(args.results_dir, file_name + ".png"))
         cv2.imwrite(os.path.join(args.results_dir, file_name + ".png"), canvas)
         final_result = candidate[0]
         with open(os.path.join(args.results_dir, file_name + ".json", "w")) as out_file:
